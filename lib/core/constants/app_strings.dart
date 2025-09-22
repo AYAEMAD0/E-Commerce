@@ -15,4 +15,16 @@ class AppStrings {
   static const String back = "Back";
   static const String next = "Next";
   static const String finish = "Finish";
+
+  //login
+  static const String welcome ="Welcome\nBack";
+  static const String email = "Email";
+  static const String password = "Password";
+  static const String forgotPassword = "Forgot Password ?";
+  static const String login = "Login";
+  static const String signUp = "Sign Up";
+  static const String createAccount = "Create An Account";
+  static const String orContinueWith = "- OR Continue with -";
+
+
 }
