@@ -10,11 +10,11 @@ class TextStyles {
     fontWeight: FontWeightHelper.extraBold,
     color: AppColor.blackColor,
   );
-  // static TextStyle font14BlackSemiBold = GoogleFonts.montserrat(
-  //   fontSize: 14.sp,
-  //   fontWeight: FontWeightHelper.semiBold,
-  //   color: AppColor.blackColor,
-  // );
+  static TextStyle font14BlackSemiBold = GoogleFonts.montserrat(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColor.blackColor,
+  );
   static TextStyle font14GraySemiBold = GoogleFonts.montserrat(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.semiBold,
@@ -35,8 +35,8 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: AppColor.hintTextFieldColor,
   );
-  static TextStyle font12PrimaryRegular = GoogleFonts.montserrat(
-    fontSize: 12.sp,
+  static TextStyle font14PrimaryRegular = GoogleFonts.montserrat(
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColor.primary,
   );
@@ -45,8 +45,8 @@ class TextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: AppColor.whiteColor,
   );
-  static TextStyle font12GrayDarkMedium = GoogleFonts.montserrat(
-    fontSize: 12.sp,
+  static TextStyle font14GrayDarkMedium = GoogleFonts.montserrat(
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.textColor,
   );
