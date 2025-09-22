@@ -5,15 +5,20 @@ import 'font_weight_helper.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TextStyles {
-  static TextStyle font24BlackExtraBold = GoogleFonts.montserrat(
-    fontSize: 24.sp,
+  static TextStyle font22BlackExtraBold = GoogleFonts.montserrat(
+    fontSize: 22.sp,
     fontWeight: FontWeightHelper.extraBold,
     color: AppColor.blackColor,
   );
-  static TextStyle font14BlackSemiBold = GoogleFonts.montserrat(
+  // static TextStyle font14BlackSemiBold = GoogleFonts.montserrat(
+  //   fontSize: 14.sp,
+  //   fontWeight: FontWeightHelper.semiBold,
+  //   color: AppColor.blackColor,
+  // );
+  static TextStyle font14GraySemiBold = GoogleFonts.montserrat(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColor.blackColor,
+    color: AppColor.grayTextColor,
   );
   static TextStyle font18PrimarySemiBold = GoogleFonts.montserrat(
     fontSize: 18.sp,
