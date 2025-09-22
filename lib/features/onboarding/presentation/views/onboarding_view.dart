@@ -16,7 +16,7 @@ class OnboardingView extends StatelessWidget {
       backgroundColor: AppColor.backgroundLight,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 30.h),
+          padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 10.h),
           child: IntroductionScreen(
             globalBackgroundColor: AppColor.backgroundLight,
             pages: OnboardingPages.pages,
