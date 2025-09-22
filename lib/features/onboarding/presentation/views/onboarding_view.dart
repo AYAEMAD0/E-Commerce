@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/constants/app_strings.dart';
 import 'package:e_commerce/core/routing/routes.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import '../pages/onboarding_pages.dart';
 import '../widgets/built_button.dart';
-import '../widgets/built_page_view_model.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
@@ -16,7 +16,7 @@ class OnboardingView extends StatelessWidget {
       backgroundColor: AppColor.backgroundLight,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 10.h),
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 13.h),
           child: IntroductionScreen(
             globalBackgroundColor: AppColor.backgroundLight,
             pages: OnboardingPages.pages,
@@ -32,9 +32,9 @@ class OnboardingView extends StatelessWidget {
             showBackButton: true,
             showNextButton: true,
             showDoneButton: true,
-            next: BuiltButton(text:"skip"),
-            back: BuiltButton(text:"Back",alignment:Alignment.bottomLeft),
-            done: BuiltButton(text:"Finish"),
+            next: BuiltButton(text:AppStrings.next),
+            back: BuiltButton(text:AppStrings.back,alignment:Alignment.bottomLeft),
+            done: BuiltButton(text:AppStrings.finish),
 
             onDone: () {
               //todo done

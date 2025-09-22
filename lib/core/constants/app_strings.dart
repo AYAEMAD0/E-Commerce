@@ -11,4 +11,8 @@ class AppStrings {
   static const String onboarding3Title = 'Fast & Secure Checkout';
   static const String onboarding3Desc =
       'Shop with confidence using safe, flexible payment options and get your orders delivered on time.';
+
+  static const String back = "Back";
+  static const String next = "Next";
+  static const String finish = "Finish";
 }
