@@ -70,4 +70,14 @@ class TextStyles {
     fontWeight: FontWeightHelper.regular,
     color: AppColor.registerColor,
   );
+  static TextStyle font34WhiteSemiBold = GoogleFonts.montserrat(
+    fontSize: 34.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColor.whiteColor,
+  );
+  static TextStyle font14lightWhiteGetStartedRegular = GoogleFonts.montserrat(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.lightWhiteGetStartedColor,
+  );
 }

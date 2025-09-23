@@ -4,4 +4,5 @@ class Routes {
   static const String signupRouteName = 'signup';
   static const String forgetPasswordRouteName = 'forgetPassword';
   static const String homeRouteName = 'home';
+  static const String getStartedRouteName = 'get_started';
 }

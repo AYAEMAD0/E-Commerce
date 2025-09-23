@@ -22,6 +22,8 @@ class AppColor{
   static const backgroundCircleSocialColor = Color(0xFFFCF3F6);
   static const  registerColor = Color(0xFFFF4B26);
 
-  //
+  //get started
+  static const  lightWhiteGetStartedColor = Color(0xFFF2F2F2);
+
 
 }

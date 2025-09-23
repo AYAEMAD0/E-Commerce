@@ -41,6 +41,15 @@ class AppStrings {
   static const String  starForgotPassword= "* ";
   static const String  submit= "Submit";
 
+  //get started
+  static const String  wantAuthentic= "You want\n Authentic, here\n you go!";
+  static const String  findBuy= "Find it here, buy it now!";
+  static const String  getStarted= "Get Started";
+
+
+
+
+
 
 
 
