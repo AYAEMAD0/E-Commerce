@@ -23,8 +23,20 @@ class AppStrings {
   static const String forgotPassword = "Forgot Password ?";
   static const String login = "Login";
   static const String signUp = "Sign Up";
-  static const String createAccount = "Create An Account";
+  static const String createAnAccount = "Create An Account";
   static const String orContinueWith = "- OR Continue with -";
+
+  //signup
+  static const String confirmPassword = "ConfirmPassword";
+  static const String createAccount = "Create Account";
+  static const String byClick = "By clicking the";
+  static const String buttonAgreeOffer = "button, you agree to the public offer ";
+  static const String  register= " Register ";
+  static const String  alreadyAccount= "I Already Have an Account";
+
+
+
+
 
 
 }
