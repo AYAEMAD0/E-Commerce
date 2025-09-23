@@ -76,7 +76,7 @@ class _SignupViewState extends State<SignupView> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 30.h),
+                    SizedBox(height: 20.h),
                     CustomButton(
                       text: AppStrings.createAccount,
                       onPressed: () {
@@ -85,7 +85,7 @@ class _SignupViewState extends State<SignupView> {
                         }
                       },
                     ),
-                    SizedBox(height: 40.h),
+                    SizedBox(height: 30.h),
                     ContinueWithGoogleAndFacebook(
                       text: AppStrings.alreadyAccount,
                       textButton: AppStrings.login,

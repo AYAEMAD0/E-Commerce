@@ -34,7 +34,7 @@ class BuiltLoginWithEmailAndPassword extends StatelessWidget {
              textPage,
               style: TextStyles.font36BlackBold,
             ),
-            SizedBox(height: 33.h),
+            SizedBox(height: 23.h),
             CustomTextField(
               hint: AppStrings.email,
               prefixIconName: Icon(Icons.person),
@@ -42,7 +42,7 @@ class BuiltLoginWithEmailAndPassword extends StatelessWidget {
               controller: emailController,
               validator: (text) => ValidatorHelper.validateEmail(text),
             ),
-            SizedBox(height: 34.h),
+            SizedBox(height: 23.h),
             CustomTextField(
               hint: AppStrings.password,
               obscure: value.isShowPassword,
@@ -60,7 +60,7 @@ class BuiltLoginWithEmailAndPassword extends StatelessWidget {
             isSignup
                 ? Column(
                   children: [
-                    SizedBox(height: 31.h),
+                    SizedBox(height: 23.h),
                     CustomTextField(
                         hint: AppStrings.confirmPassword,
                         obscure: value.isShowConfirmPassword,

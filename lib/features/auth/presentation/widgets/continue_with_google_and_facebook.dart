@@ -46,7 +46,7 @@ class ContinueWithGoogleAndFacebook extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 28.h),
+        SizedBox(height: 18.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
