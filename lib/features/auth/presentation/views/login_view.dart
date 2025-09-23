@@ -55,6 +55,10 @@ class _LoginViewState extends State<LoginView> {
                       child: TextButton(
                         onPressed: () {
                           //todo nav into forget password
+                          Navigator.pushNamed(
+                            context,
+                            Routes.forgetPasswordRouteName,
+                          );
                         },
                         child: Text(
                           AppStrings.forgotPassword,
@@ -89,6 +93,7 @@ class _LoginViewState extends State<LoginView> {
             ),
           ),
         ),
-    ));
+      ),
+    );
   }
 }

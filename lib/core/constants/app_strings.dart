@@ -34,6 +34,15 @@ class AppStrings {
   static const String  register= " Register ";
   static const String  alreadyAccount= "I Already Have an Account";
 
+  //forget password
+  static const String  forgotPasswordPage= "Forgot \npassword";
+  static const String  emailAddress= "Enter your email address";
+  static const String  sendMessage= "We will send you a message to set or reset your new password";
+  static const String  starForgotPassword= "* ";
+  static const String  submit= "Submit";
+
+
+
 
 
 
