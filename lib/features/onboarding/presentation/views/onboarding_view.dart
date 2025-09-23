@@ -2,10 +2,8 @@ import 'package:e_commerce/core/constants/app_strings.dart';
 import 'package:e_commerce/core/routing/routes.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import '../../../auth/presentation/cubits/login_cubit.dart';
 import '../pages/onboarding_pages.dart';
 import '../widgets/built_button.dart';
 
