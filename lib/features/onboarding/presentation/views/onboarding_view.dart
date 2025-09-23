@@ -18,7 +18,7 @@ class OnboardingView extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 13.h),
           child: IntroductionScreen(
-            globalBackgroundColor: AppColor.backgroundLight,
+            globalBackgroundColor: AppColor.whiteColor,
             pages: OnboardingPages.pages,
             dotsDecorator: DotsDecorator(
               color: AppColor.indicatorUnactiveColor,
