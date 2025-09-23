@@ -68,7 +68,7 @@ class _SignupViewState extends State<SignupView> {
                               ),
                               child: Text(
                                 AppStrings.register,
-                                style: TextStyles.font12RedRegular,
+                                style: TextStyles.font14RedRegular,
                               ),
                             ),
                           ),

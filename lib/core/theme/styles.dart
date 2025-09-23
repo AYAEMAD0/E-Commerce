@@ -65,8 +65,8 @@ class TextStyles {
     fontWeight: FontWeightHelper.regular,
     color: AppColor.hintTextFieldColor,
   );
-  static TextStyle font12RedRegular = GoogleFonts.montserrat(
-    fontSize: 12.sp,
+  static TextStyle font14RedRegular = GoogleFonts.montserrat(
+    fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColor.registerColor,
   );
