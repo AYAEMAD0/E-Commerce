@@ -1,16 +1,33 @@
-import 'package:e_commerce/core/constants/app_asset.dart';
 import 'package:e_commerce/core/constants/app_strings.dart';
 import 'package:e_commerce/core/theme/app_color.dart';
 import 'package:e_commerce/features/auth/presentation/cubits/login_cubit.dart';
 import 'package:e_commerce/features/auth/presentation/widgets/built%20_login_with_email_and%20password.dart';
+import 'package:e_commerce/features/auth/presentation/widgets/continue_with_google_and_facebook.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/styles.dart';
-import '../widgets/social_item_login.dart';
+import '../../../../core/widgets/custom_button.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
   const LoginView({super.key});
+
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,65 +39,56 @@ class LoginView extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  BuiltLoginWithEmailAndPassword(),
-                  SizedBox(height: 75.h),
-                  Text(
-                    AppStrings.orContinueWith,
-                    textAlign: TextAlign.center,
-                    style: TextStyles.font14GrayDarkMedium,
-                  ),
-                  SizedBox(height: 20.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SocialItemLogin(
-                        svgImage: AppAsset.googleImage,
-                        onTap: () {
-                          //todo login with google
+              child: Form(
+                key: formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    BuiltLoginWithEmailAndPassword(
+                      textPage: AppStrings.welcome,
+                      emailController: emailController,
+                      passwordController: passwordController,
+                    ),
+                    SizedBox(height: 9.h),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: TextButton(
+                        onPressed: () {
+                          //todo nav into forget password
                         },
-                      ),
-                      SizedBox(width: 10.w),
-                      SocialItemLogin(
-                        svgImage: AppAsset.facebookImage,
-                        onTap: () {
-                          //todo login with facebook
-                        },
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 28.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        AppStrings.createAccount,
-                        style: TextStyles.font14GrayDarkRegular,
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: TextButton(
-                          onPressed: () {
-                            //todo nav into signup
-                          },
-                          child: Text(
-                            AppStrings.signUp,
-                            style: TextStyles.font14PrimarySemiBold.copyWith(
-                              decoration: TextDecoration.underline,
-                              decorationColor: AppColor.primary,
-                            ),
-                          ),
+                        child: Text(
+                          AppStrings.forgotPassword,
+                          style: TextStyles.font14PrimaryRegular,
                         ),
                       ),
-                    ],
-                  ),
-                ],
+                    ),
+                    SizedBox(height: 52.h),
+                    CustomButton(
+                      text: AppStrings.login,
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          //todo logic login
+                        }
+                      },
+                    ),
+                    SizedBox(height: 60.h),
+                    ContinueWithGoogleAndFacebook(
+                      text: AppStrings.createAnAccount,
+                      textButton: AppStrings.signUp,
+                      onPressed: () {
+                        //todo nav into signup
+                        Navigator.pushReplacementNamed(
+                          context,
+                          Routes.signupRouteName,
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ),
-      ),
-    );
+    ));
   }
 }
