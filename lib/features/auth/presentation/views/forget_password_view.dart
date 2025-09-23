@@ -16,6 +16,8 @@ class ForgetPasswordView extends StatefulWidget {
 
 class _ForgetPasswordViewState extends State<ForgetPasswordView> {
   TextEditingController emailController = TextEditingController();
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,42 +26,48 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                AppStrings.forgotPasswordPage,
-                style: TextStyles.font36BlackBold,
-              ),
-              SizedBox(height: 23.h),
-              CustomTextField(
-                hint: AppStrings.emailAddress,
-                prefixIconName: Icon(Icons.email),
-                keyboard: TextInputType.emailAddress,
-                controller: emailController,
-                validator: (text) => ValidatorHelper.validateEmail(text),
-              ),
-              SizedBox(height: 26.h),
-              RichText(
-                text: TextSpan(
-                  style: TextStyles.font12GrayRegular,
-                  children: [
-                    TextSpan(
-                      text: AppStrings.starForgotPassword,
-                      style: TextStyles.font14RedRegular,
-                    ),
-                    TextSpan(text: AppStrings.sendMessage),
-                  ],
+          child: Form(
+            key: formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  AppStrings.forgotPasswordPage,
+                  style: TextStyles.font36BlackBold,
                 ),
-              ),
-              SizedBox(height: 26.h),
-              CustomButton(
-                text: AppStrings.submit,
-                onPressed: () {
-                  //todo submit in forgot password logic
-                },
-              ),
-            ],
+                SizedBox(height: 23.h),
+                CustomTextField(
+                  hint: AppStrings.emailAddress,
+                  prefixIconName: Icon(Icons.email),
+                  keyboard: TextInputType.emailAddress,
+                  controller: emailController,
+                  validator: (text) => ValidatorHelper.validateEmail(text),
+                ),
+                SizedBox(height: 26.h),
+                RichText(
+                  text: TextSpan(
+                    style: TextStyles.font12GrayRegular,
+                    children: [
+                      TextSpan(
+                        text: AppStrings.starForgotPassword,
+                        style: TextStyles.font14RedRegular,
+                      ),
+                      TextSpan(text: AppStrings.sendMessage),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 26.h),
+                CustomButton(
+                  text: AppStrings.submit,
+                  onPressed: () {
+                    if(formKey.currentState!.validate()){
+                      //todo submit in forgot password logic
+                    }
+
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
