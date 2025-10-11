@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_asset.dart';
 import '../../../../core/constants/app_strings.dart';
-import '../../../../core/routing/routes.dart' show Routes;
 import '../../../../core/theme/app_color.dart';
 import '../../../../core/theme/styles.dart';
 

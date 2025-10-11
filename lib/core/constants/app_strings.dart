@@ -25,14 +25,21 @@ class AppStrings {
   static const String signUp = "Sign Up";
   static const String createAnAccount = "Create An Account";
   static const String orContinueWith = "- OR Continue with -";
+  static const String  loginSuccessfully= "Login Successfully";
+  static const String emailNotVerified= 'Email not verified';
+  static const String emailVerifiedYet= 'Your email is not verified yet. A new verification email has been sent. Please verify before logging in.';
 
   //signup
   static const String confirmPassword = "ConfirmPassword";
   static const String createAccount = "Create Account";
-  static const String byClick = "By clicking the";
-  static const String buttonAgreeOffer = "button, you agree to the public offer ";
-  static const String  register= " Register ";
   static const String  alreadyAccount= "I Already Have an Account";
+  static const String  loading= "Loading...";
+  static const String  success= "Success";
+  static const String  verificationEmail= "Verification email sent to";
+  static const String  verifyBeforeLogin= "Please verify before login.";
+  static const String  ok= "Ok";
+  static const String  error= "Error";
+
 
   //forget password
   static const String  forgotPasswordPage= "Forgot \npassword";
@@ -40,6 +47,8 @@ class AppStrings {
   static const String  sendMessage= "We will send you a message to set or reset your new password";
   static const String  starForgotPassword= "* ";
   static const String  submit= "Submit";
+  static const String resetPasswordSent = 'Password reset email has been sent. Please check your inbox.';
+
 
 
 
